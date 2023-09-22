@@ -8,22 +8,28 @@ def manager_role():
     print("")   
 
     choice_manager =int(input("enter your choice:"))
+  
 
-
-
+    
     if choice_manager ==1:
-        print("add fruit stock:")
-        fruit_name=input("enter your fruit name :")
-        fruit_qty=int(input("Enter fruit qty :"))
-        fruit_price=int(input("enter fruit price :"))
-        fruit_dic = {fruit_name:{'qty':fruit_qty, 'price':fruit_price}}
-        
-        
-        
-        
-        print(fruit_dic)
-        
+            print("add fruit stock:")
+            fruit_name=input("enter your fruit name :")
+            fruit_qty=int(input("Enter fruit qty :"))
+            fruit_price=int(input("enter fruit price :"))
+            fruit_dic = {fruit_name:{'qty':fruit_qty, 'price':fruit_price}}      
+            print(fruit_dic)
 
+            with open('Fruit_stock.txt', 'a') as file:
+                file.write(f"{fruit_dic} ||")
+
+
+    elif choice_manager==2:
+            
+        with open("Fruit_stock.txt", 'r') as f:
+            print(f.readline())
 
     else:
-        pass
+        print("error")
+        
+         
+

@@ -1,0 +1,1 @@
+{'apple': {'qty': 5, 'price': 1200}} ||{'banana': {'qty': 3, 'price': 300}} ||{'cherry': {'qty': 1, 'price': 250}} ||{'strawberry': {'qty': 1, 'price': 500}} ||{'apple': {'qty': 5, 'price': 5}} ||

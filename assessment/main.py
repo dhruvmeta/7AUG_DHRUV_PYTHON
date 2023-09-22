@@ -1,8 +1,8 @@
 from fruit_manager import manager_role
 
-main_fruit_dic = {}
+Y_or_N='Y'
 
-while True :
+while Y_or_N!='N':
 
     print("welcome to your market !!!")
     print("  ")
@@ -16,8 +16,12 @@ while True :
         manager_role()
 
     else:
-        print("error")
-print (input("enter y for yes and n for no :"))
+        print("error") 
+
+
+
+    Y_or_N = input("Do  you want to  perform more operation : press y for yes and n for no : ").capitalize()
+
 
 
 
