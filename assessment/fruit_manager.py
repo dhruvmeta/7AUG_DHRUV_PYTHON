@@ -1,3 +1,5 @@
+import datetime
+
 def manager_role():
     print("")
     print("             Fruit Market Manager")
@@ -17,16 +19,17 @@ def manager_role():
             fruit_qty=int(input("Enter fruit qty :"))
             fruit_price=int(input("enter fruit price :"))
             fruit_dic = {fruit_name:{'qty':fruit_qty, 'price':fruit_price}}      
+            log = datetime.datetime.now()
             print(fruit_dic)
 
             with open('Fruit_stock.txt', 'a') as file:
-                file.write(f"{fruit_dic} ||")
+                file.write(f"Date & Time{log}\n{fruit_dic} ||")
 
 
     elif choice_manager==2:
             
         with open("Fruit_stock.txt", 'r') as f:
-            print(f.readline())
+            print(f.read())
 
     else:
         print("error")
